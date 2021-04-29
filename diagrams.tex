@@ -1,0 +1,155 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+
+\begin{document}
+
+% \begin{center}
+%   \begin{tikzpicture}
+%     \begin{axis}[
+%       axis equal image,
+%       xmin=-35,
+%       xmax=35,
+%       ymin=-35,
+%       ymax=35,
+%       width=12cm,
+%       title=Original Sheep,
+%     ]
+%       \addplot[only marks, color=blue,] table[x=a, y=b, col sep=comma,]{og-columns.csv};
+%     \end{axis}
+%   \end{tikzpicture}
+% \end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[
+      axis equal image,
+      xmin=-35,
+      xmax=35,
+      ymin=-35,
+      ymax=35,
+      width=12cm,
+      title=DE Sheep,
+    ]
+      \addplot[only marks, color=red,] table[x=a, y=b, col sep=comma,]{nocow-columns.csv};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[
+      axis equal image,
+      xmin=-35,
+      xmax=35,
+      ymin=-35,
+      ymax=35,
+      width=12cm,
+      title=DE Sheep Two Commands,
+    ]
+      \addplot[only marks, color=green,] table[x=a, y=b, col sep=comma,]{twogroups-columns.csv};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+
+% \begin{center}
+%   \begin{tikzpicture}
+%     \begin{axis}[
+%       axis equal image,
+%       xmin=-35,
+%       xmax=35,
+%       ymin=-35,
+%       ymax=35,
+%       width=12cm,
+%       title=Sheep Position Relative to TC in Original (Blue) vs DE (Red),
+%     ]
+%       \addplot[only marks, color=blue,] table[x=a, y=b, col sep=comma,]{og-columns.csv};
+%       \addplot[only marks, color=red,] table[x=a, y=b, col sep=comma,]{nocow-columns.csv};
+%     \end{axis}
+%   \end{tikzpicture}
+% \end{center}
+
+% \begin{center}
+%   \begin{tikzpicture}
+%     \begin{axis}[
+%       xlabel=Euclidean Distance From TC,
+%       ylabel=Number of Maps,
+%       title=Number of Maps Where All 4 Sheep are Further Than a Given Distance,
+%       width=15cm,
+%     ]
+%       \addplot[color=blue,] table[x=d, y=c, col sep=comma,]{og-min4.csv};
+%       \addlegendentry{Original}
+%       \addplot[color=red,] table[x=d, y=c, col sep=comma,]{nocow-min4.csv};
+%       \addlegendentry{DE One Command}
+%       \addplot[color=green,] table[x=d, y=c, col sep=comma,]{twogroups-min4.csv};
+%       \addlegendentry{DE Two Commands}
+%     \end{axis}
+%   \end{tikzpicture}
+% \end{center}
+
+% \begin{center}
+%   \begin{tikzpicture}
+%     \begin{axis}[
+%       axis equal image,
+%       xmin=-35,
+%       xmax=35,
+%       ymin=-35,
+%       ymax=35,
+%       width=12cm,
+%       title=Sheep Pairs Original,
+%     ]
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=14,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=16,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=18,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=20,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=22,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=24,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=26,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=28,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=30,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=32,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=34,];
+%       \addplot[only marks, color=blue] table[x=a, y=b, col sep=comma,]{og-columns-short/og-short-0.csv};
+%       \addplot[only marks, color=red] table[x=a, y=b, col sep=comma,]{og-columns-short/og-short-1.csv};
+%       \addplot[only marks, color=green] table[x=a, y=b, col sep=comma,]{og-columns-short/og-short-2.csv};
+%       \addplot[only marks, color=yellow] table[x=a, y=b, col sep=comma,]{og-columns-short/og-short-3.csv};
+%       \addplot[only marks, color=cyan] table[x=a, y=b, col sep=comma,]{og-columns-short/og-short-4.csv};
+%     \end{axis}
+%   \end{tikzpicture}
+% \end{center}
+
+% \begin{center}
+%   \begin{tikzpicture}
+%     \begin{axis}[
+%       axis equal image,
+%       xmin=-35,
+%       xmax=35,
+%       ymin=-35,
+%       ymax=35,
+%       width=12cm,
+%       title=Sheep Pairs DE,
+%     ]
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=14,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=16,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=18,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=20,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=22,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=24,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=26,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=28,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=30,];
+%       \draw[brown,dashed] (axis cs:0,0) circle [radius=32,];
+%       \draw[gray,dashed] (axis cs:0,0) circle [radius=34,];
+%       \addplot[only marks, color=blue] table[x=a, y=b, col sep=comma,]{nocow-columns-short/nocow-short-0.csv};
+%       \addplot[only marks, color=red] table[x=a, y=b, col sep=comma,]{nocow-columns-short/nocow-short-1.csv};
+%       \addplot[only marks, color=green] table[x=a, y=b, col sep=comma,]{nocow-columns-short/nocow-short-2.csv};
+%       \addplot[only marks, color=yellow] table[x=a, y=b, col sep=comma,]{nocow-columns-short/nocow-short-3.csv};
+%       \addplot[only marks, color=cyan] table[x=a, y=b, col sep=comma,]{nocow-columns-short/nocow-short-4.csv};
+%     \end{axis}
+%   \end{tikzpicture}
+% \end{center}
+
+\end{document}
